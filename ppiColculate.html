@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./ppi.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="input_container">
+                <label for="sideWidth">matrix width (mm)</label> 
+                <input onkeyup="createMonitorProps(id)" class="sideWidth input" id="sideWidth" type="number">
+                
+                <label for="sideHeight">matrix Height (mm)</label> 
+                <input onkeyup="createMonitorProps(id)" class="sideHeight input" id="sideHeight" type="number">
+
+                <label for="pixelVer">Vertical pixels</label>
+                <input onkeyup="createMonitorProps(id)" class="pixelVer input" id="pixelVer" type="number">
+                
+                <label for="pixelHor">Horizontal pixels</label>
+                <input onkeyup="createMonitorProps(id)" class="pixelHor input" id="pixelHor" type="number">
+            </div>
+
+            <button onclick="calculatePpi()" class="colculateButton">calculate</button> 
+            
+            <p class="result" id="result">result</p>
+        </div>
+    </main>
+ 
+    <script src="./ppi.js" defer></script>
+</body>
+</html>
